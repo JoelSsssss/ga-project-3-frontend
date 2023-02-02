@@ -52,7 +52,6 @@ export default function EditProduct() {
   }, []);
 
   const handleChange = (e) => {
-    console.log(e);
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -64,7 +63,6 @@ export default function EditProduct() {
     API.PUT(API.ENDPOINTS.getSingleProduct(id), data, API.getHeaders())
       .then(({ data }) => {
         setFormData(data);
-        console.log('EDITED INFO', existingProductInfo);
         NOTIFY.SUCCESS(`Edited ${data.name}`);
         navigate(`/products/${data._id}`);
       })

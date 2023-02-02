@@ -29,7 +29,7 @@ export default function CreateNewBrand() {
 
     API.POST(API.ENDPOINTS.createBrand, data, API.getHeaders())
       .then(() => navigate('/brands'))
-      .then(() => console.log('hello'))
+      // .then(() => console.log('hello'))
       .catch((e) => {
         if (e.status === 301) {
           setError(true);

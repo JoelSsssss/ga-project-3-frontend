@@ -25,7 +25,7 @@ export default function ReviewProduct() {
       API.getHeaders()
     )
       .then(({ data }) => {
-        console.log({ data });
+        // console.log({ data });
         navigate(`/products/${id}`);
       })
       .catch((e) => console.log(e));

@@ -33,16 +33,10 @@ export default function FilterComp({ onBrandsSelected, onCategoriesSelected }) {
   if (brands === null) {
     return <p>Brands still Loading</p>;
   }
-  // else {
-  //   console.log('Brands Data from FilterComp', brands);
-  // }
 
   if (categories === null) {
     return <p>Categories still Loading</p>;
   }
-  // else {
-  //   console.log('Categories Data from FilterComp', categories);
-  // }
 
   return (
     <>
@@ -58,7 +52,6 @@ export default function FilterComp({ onBrandsSelected, onCategoriesSelected }) {
           placeholderText='Brand'
           onChange={(event, selectedBrandOptions) => {
             onBrandsSelected(selectedBrandOptions);
-            console.log('SELECTED BRANDS', selectedBrandOptions);
           }}
         />
       </Box>
@@ -68,7 +61,6 @@ export default function FilterComp({ onBrandsSelected, onCategoriesSelected }) {
         placeholderText='Category'
         onChange={(event, selectedCategorisOptions) => {
           onCategoriesSelected(selectedCategorisOptions);
-          console.log('SELECTED CATEGORIES', selectedCategorisOptions);
         }}
       />
     </>

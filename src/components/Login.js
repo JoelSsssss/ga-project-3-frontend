@@ -25,12 +25,12 @@ export default function Login() {
     e.preventDefault();
     API.POST(API.ENDPOINTS.login, formFields)
       .then(({ data }) => {
-        console.log(data.token);
+        // console.log(data.token);
         AUTH.setToken(data.token);
         navigate('/products');
       })
       .catch((e) => {
-        console.log(e);
+        // console.log(e);
         setError({ email: true, password: true });
       });
   };
