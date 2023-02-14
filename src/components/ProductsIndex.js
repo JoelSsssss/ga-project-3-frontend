@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react';
 import { API } from '../lib/api';
+import ProductCard from './common/ProductCard';
+import FilterComp from './common/FilterComp';
 
 import { Container, Grid } from '@mui/material';
 import '../styles/ProductIndex.scss';
-
-import ProductCard from './common/ProductCard';
-import FilterComp from './common/FilterComp';
 
 export default function ProductsIndex() {
   const [products, setProducts] = useState(null);

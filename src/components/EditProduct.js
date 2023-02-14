@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { NOTIFY } from '../lib/notifications';
+import { API } from '../lib/api';
+
 import {
   TextField,
   Container,
@@ -9,10 +11,8 @@ import {
   FormControl,
   InputLabel,
   Select,
-  MenuItem,
-  Typography
+  MenuItem
 } from '@mui/material';
-import { API } from '../lib/api';
 import '../styles/ProductIndex.scss';
 
 export default function EditProduct() {

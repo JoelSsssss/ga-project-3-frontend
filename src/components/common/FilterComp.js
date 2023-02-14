@@ -1,10 +1,8 @@
-import Filter from './Filter';
-
 import { useState, useEffect } from 'react';
-
+import Filter from './Filter';
 import { API } from '../../lib/api';
 
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 export default function FilterComp({ onBrandsSelected, onCategoriesSelected }) {
   const [categories, setCategories] = useState([]);

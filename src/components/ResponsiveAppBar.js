@@ -54,11 +54,23 @@ function ResponsiveAppBar() {
           >
             🌱Tazty Alternativez
           </Typography>
-
           <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' } }}>
             <Search />
           </Box>
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          {/* <Typography
+            sx={{
+              mr: 2,
+              display: { xs: 'none', md: 'flex' },
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: 'inherit',
+              textDecoration: 'none'
+            }}
+          >
+            🌱
+          </Typography> */}
           <Typography
             variant='h5'
             noWrap
@@ -77,7 +89,7 @@ function ResponsiveAppBar() {
           >
             LOGO
           </Typography>
-          <Box sx={{ flexGrow: 0 }}>
+          {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title='Open settings'>
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt='Remy Sharp' src={User} />
@@ -105,7 +117,7 @@ function ResponsiveAppBar() {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
+          </Box> */}
         </Toolbar>
       </Container>
     </AppBar>
