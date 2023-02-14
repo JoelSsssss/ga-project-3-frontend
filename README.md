@@ -6,7 +6,7 @@
 
 My third project for my General Assembly Software Engineering Immersive course was a group project where we built a complete MERN stack app. My project partners [Ellie Maitland](https://github.com/ermaitland), [Joel Sahiti](https://github.com/JoelSsssss) and I built a vegan food products review platform using Express.js, Node.js and MongoDB for the backend and React for the frontend.
 
-**Link to deployment:** [https://randosongsrandoyears.netlify.app/](https://randosongsrandoyears.netlify.app/)
+**Link to deployment:** [https://tazty-alternativez.netlify.app/](https://tazty-alternativez.netlify.app/)
 
 Test account credentials: email: `testme@testme.com`, password: `Password!1`
 
