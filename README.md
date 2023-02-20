@@ -198,7 +198,7 @@ Having worked in localisation before, a small but personally dear to me code sni
 
 After getting the main components working, I used Figma to create a more detailed design that we used as a template. We used the MUI React library a lot to easily add component styling and functionality like filter or search. Using the MUI grid system, I also made the product index and product pages responsive, with breakpoints for medium, small and very small devices
 
-![Screenshot - Figma Mock-Up](./src/assets/trello_board.png 'Screenshot - Figma Mock-Up')
+![Screenshot - Figma Mock-Up](./src/assets/figma_mockup.png 'Screenshot - Figma Mock-Up')
 
 _Screenshot: Figma design mock-up for product index page_
 
