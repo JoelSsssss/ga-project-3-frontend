@@ -12,7 +12,7 @@ Test account credentials: email: `testme@testme.com`, password: `Password!1`
 
 # Getting Started
 
-- Clone or download the source code for the [backend](https://github.com/linh-vup/ga_project-4-backend) and [frontend](https://github.com/linh-vup)
+- Clone or download the source code for the [backend](https://github.com/linh-vup/ga_project-4-backend) and [frontend](https://github.com/linh-vup/ga-project-3-frontend)
 - In backend CLI:
   - Run `npm run dev`
 - In frontend CLI
