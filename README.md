@@ -8,7 +8,7 @@ https://ga-project-3-frontend-maxy.netlify.app
 
 ## Getting Started/Code Installation:
 
-Install the ‘Project 2’ code
+Install the ‘Project 3’ code
 Open the code with live server (In ‘Visual Studio Code’ this can be done by right clicking the ‘index.html’ folder in the ‘EXPLORER’ menu and selecting ‘Open with live server’.
 Type in the terminal (make sure you are in the ga-project-3-client ‘npm install’ ‘npm i cloudinary’ ‘npm i @emotion/styled’ ‘npm install @mui/material’ ‘npm i axios’ ‘npm i buffer’ ‘npm i react-router-dom’ ‘npm i sass’ ‘npm i react-toastify’
 In the same terminal write ‘npm start’
