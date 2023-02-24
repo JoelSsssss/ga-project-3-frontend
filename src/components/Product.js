@@ -2,7 +2,8 @@ import { useState, useEffect, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { API } from '../lib/api';
 import { useAuthenticated } from '../hook/useAuthenticated';
-import '../styles/Product.scss';
+import ReviewCard from './common/ReviewCard';
+import { AUTH } from '../lib/auth';
 
 import ProductRating from './common/ProductRating';
 import {
@@ -17,8 +18,6 @@ import {
 import ModeEditIcon from '@mui/icons-material/ModeEdit';
 
 import '../styles/Product.scss';
-import ReviewCard from './common/ReviewCard';
-import { AUTH } from '../lib/auth';
 
 export default function Product() {
   const [isUpdated, setIsUpdated] = useState(false);
@@ -72,7 +71,6 @@ export default function Product() {
                     </Link>
                   )}
               </Box>
-
               <Typography color='text.secondary'>
                 Brand: {singleProduct?.brand?.name}
               </Typography>
@@ -86,13 +84,10 @@ export default function Product() {
               >
                 Decription: {singleProduct.description}
               </Typography>
-
               <ProductRating rating={singleProduct.rating || 0} />
-
               <Typography color='text.secondary'>
                 {singleProduct.rating || 'no'} avg. Rating{' '}
               </Typography>
-
               {isNumberOfReviewsOne ? (
                 <Typography color='text.secondary'>
                   {numberOfReviews} Rating and Review
@@ -102,22 +97,6 @@ export default function Product() {
                   {numberOfReviews} Ratings and Reviews
                 </Typography>
               )}
-
-              {/* <CardActions>
-            {isLoggedIn ? (
-              !userHasReviewed ? (
-                <Link to={`/products/${singleProduct?._id}/reviews`}>
-                  <Button size='small'>Create a Review</Button>
-                </Link>
-              ) : (
-                <p>something</p>
-              )
-            ) : (
-              <Link to={`/login`}>
-                <Button size='small'>Login to create a Review</Button>
-              </Link>
-            )}
-          </CardActions> */}
               <CardActions>
                 {isLoggedIn && !userHasReviewed && (
                   <Link to={`/products/${singleProduct?._id}/reviews`}>

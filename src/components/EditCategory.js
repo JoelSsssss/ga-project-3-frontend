@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
+import { API } from '../lib/api';
 import { NOTIFY } from '../lib/notifications';
+
 import {
   TextField,
   Container,
@@ -11,7 +13,6 @@ import {
   Grid
 } from '@mui/material';
 
-import { API } from '../lib/api';
 import '../styles/ProductIndex.scss';
 
 export default function EditCategory() {
@@ -47,8 +48,6 @@ export default function EditCategory() {
         }
         console.log(e);
       });
-
-    // const deleteC = () => API.DELETE(API.ENDPOINTS.deleteCategory(category._id))
   };
 
   return (
@@ -99,11 +98,7 @@ export default function EditCategory() {
             <Typography color='text.primary' sx={{ mb: 2 }}>
               Add a new Category
             </Typography>
-            <Container
-              maxWidth='lg'
-              //   sx={{ display: 'flex', justifyContent: 'center', pt: 5 }
-              // }
-            >
+            <Container maxWidth='lg'>
               <form onSubmit={handleSubmit}>
                 <Box sx={{ mb: 2 }}>
                   <TextField

@@ -54,7 +54,6 @@ function ResponsiveAppBar() {
           >
             🌱Tazty Alternativez
           </Typography>
-
           <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' } }}>
             <Search />
           </Box>
@@ -77,7 +76,7 @@ function ResponsiveAppBar() {
           >
             LOGO
           </Typography>
-          <Box sx={{ flexGrow: 0 }}>
+          {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title='Open settings'>
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt='Remy Sharp' src={User} />
@@ -105,7 +104,7 @@ function ResponsiveAppBar() {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
+          </Box> */}
         </Toolbar>
       </Container>
     </AppBar>

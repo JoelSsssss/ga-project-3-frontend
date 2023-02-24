@@ -14,6 +14,7 @@ const ENDPOINTS = {
   login: `${process.env.REACT_APP_BASE_URL}/api/login`,
   register: `${process.env.REACT_APP_BASE_URL}/api/register`,
   cloudinary: `https:/${process.env.REACT_APP_BASE_URL}/api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}/image/upload`,
+
   singleUser: (userId) =>
     `${process.env.REACT_APP_BASE_URL}/api/profile/${userId}`,
   createReview: (id) =>
@@ -27,7 +28,11 @@ const ENDPOINTS = {
     `${process.env.REACT_APP_BASE_URL}/api/categories/${id}`,
   getFilteredProducts: (categories, brands) =>
     `${process.env.REACT_APP_BASE_URL}/api/products/filter?categories=${categories}&brands=${brands}`,
+<<<<<<< HEAD
   createBrand: `${process.env.REACT_APP_BASE_URL}/api/brands`
+=======
+  createBrand: '/api/brands'
+>>>>>>> 2a7f18ece91a9524bfc65f8f23ba649745c44121
 };
 
 const getHeaders = () => ({

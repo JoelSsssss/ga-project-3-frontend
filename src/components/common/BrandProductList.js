@@ -9,7 +9,7 @@ import ProductCard from './ProductCard';
 import '../../styles/BrandsProductsList.scss';
 
 export default function BrandProductList() {
-  console.log('heollo');
+  // console.log('heollo');
   const [brandProducts, setBrandProducts] = useState(null);
 
   const { id } = useParams();
@@ -24,7 +24,7 @@ export default function BrandProductList() {
       });
   }, [id]);
 
-  console.log('The information', brandProducts);
+  // console.log('The information', brandProducts);
 
   return (
     <section className='brand-page'>

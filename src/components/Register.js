@@ -61,7 +61,7 @@ export default function Register() {
       navigate('/');
       // When have the routes navigate to the products page
     } catch (e) {
-      console.log(e);
+      // console.log(e);
       setError(e);
     }
   };

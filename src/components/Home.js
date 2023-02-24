@@ -80,7 +80,7 @@ export default function Home() {
         </div>{' '}
         <div className='ReviewCard'>
           {exampleReviews.map((review) => (
-            <Card sx={{ minWidth: 305, mb: 2 }}>
+            <Card sx={{ minWidth: 305, mb: 2 }} key={review.username}>
               <CardContent>
                 <Box
                   sx={{

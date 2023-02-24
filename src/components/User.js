@@ -18,7 +18,7 @@ export default function User() {
     API.POST(API.ENDPOINTS.singleUser(userId), {}, API.getHeaders())
       .then(({ data }) => {
         setSingleUser(data);
-        console.log({ data });
+        // console.log({ data });
       })
       .catch(({ message, response }) => {
         console.log(message, response);
@@ -29,7 +29,7 @@ export default function User() {
   if (singleUser === null) {
     return <p>Loading User</p>;
   }
-  console.log({ singleUser });
+  // console.log({ singleUser });
 
   const goBackToProducts = () => navigate('/products');
 

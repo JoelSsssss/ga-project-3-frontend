@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { NOTIFY } from '../lib/notifications';
+import { API } from '../lib/api';
+
 import {
   TextField,
   Container,
@@ -9,10 +11,8 @@ import {
   FormControl,
   InputLabel,
   Select,
-  MenuItem,
-  Typography
+  MenuItem
 } from '@mui/material';
-import { API } from '../lib/api';
 import '../styles/ProductIndex.scss';
 
 export default function EditProduct() {
@@ -52,7 +52,6 @@ export default function EditProduct() {
   }, []);
 
   const handleChange = (e) => {
-    console.log(e);
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -64,7 +63,6 @@ export default function EditProduct() {
     API.PUT(API.ENDPOINTS.getSingleProduct(id), data, API.getHeaders())
       .then(({ data }) => {
         setFormData(data);
-        console.log('EDITED INFO', existingProductInfo);
         NOTIFY.SUCCESS(`Edited ${data.name}`);
         navigate(`/products/${data._id}`);
       })

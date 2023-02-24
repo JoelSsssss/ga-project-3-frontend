@@ -12,7 +12,7 @@ export default function UserIndex() {
     API.GET(API.ENDPOINTS.getAllUsers)
       .then(({ data }) => {
         setUsers(data);
-        console.log(data);
+        // console.log(data);
       })
       .catch(({ message, responce }) => {
         console.log(message, responce);

@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { NOTIFY } from '../lib/notifications';
+import { API } from '../lib/api';
+
 import {
   TextField,
   Container,
@@ -12,7 +14,7 @@ import {
   MenuItem,
   Typography
 } from '@mui/material';
-import { API } from '../lib/api';
+
 import '../styles/ProductIndex.scss';
 
 export default function CreateProduct() {
@@ -54,7 +56,6 @@ export default function CreateProduct() {
         : {
             name: formData.name,
             description: formData.description,
-            // type: formData.type,
             image: formData.image
           };
 
@@ -162,5 +163,3 @@ export default function CreateProduct() {
     </section>
   );
 }
-
-// test
