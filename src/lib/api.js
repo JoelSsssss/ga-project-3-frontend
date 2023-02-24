@@ -3,25 +3,31 @@ import { create } from 'lodash';
 import { AUTH } from './auth';
 
 const ENDPOINTS = {
-  getAllProducts: '/api/products',
-  getAllCategories: '/api/categories',
-  getAllUsers: '/api/users',
-  allBrands: '/api/brands',
-  allProductsfForBrand: (id) => `/api/brands/${id}/products`,
-  getSingleProduct: (id) => `/api/products/${id}`,
-  login: '/api/login',
-  register: '/api/register',
-  cloudinary: `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}/image/upload`,
-  singleUser: (userId) => `/api/profile/${userId}`,
-  createReview: (id) => `/api/products/${id}/reviews`,
+  getAllProducts: `${process.env.REACT_APP_BASE_URL}/api/products`,
+  getAllCategories: `${process.env.REACT_APP_BASE_URL}/api/categories`,
+  getAllUsers: `${process.env.REACT_APP_BASE_URL}/api/users`,
+  allBrands: `${process.env.REACT_APP_BASE_URL}/api/brands`,
+  allProductsfForBrand: (id) =>
+    `${process.env.REACT_APP_BASE_URL}/api/brands/${id}/products`,
+  getSingleProduct: (id) =>
+    `${process.env.REACT_APP_BASE_URL}/api/products/${id}`,
+  login: `${process.env.REACT_APP_BASE_URL}/api/login`,
+  register: `${process.env.REACT_APP_BASE_URL}/api/register`,
+  cloudinary: `https:/${process.env.REACT_APP_BASE_URL}/api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}/image/upload`,
+  singleUser: (userId) =>
+    `${process.env.REACT_APP_BASE_URL}/api/profile/${userId}`,
+  createReview: (id) =>
+    `${process.env.REACT_APP_BASE_URL}/api/products/${id}/reviews`,
   singleReview: (productId, reviewId) =>
-    `/api/products/${productId}/reviews/${reviewId}`,
-  deleteBrand: (id) => `/api/brands/${id}`,
-  search: (query) => `/api/products/search?search=${query}`,
-  deleteCategory: (id) => `/api/categories/${id}`,
+    `${process.env.REACT_APP_BASE_URL}/api/products/${productId}/reviews/${reviewId}`,
+  deleteBrand: (id) => `${process.env.REACT_APP_BASE_URL}/api/brands/${id}`,
+  search: (query) =>
+    `${process.env.REACT_APP_BASE_URL}/api/products/search?search=${query}`,
+  deleteCategory: (id) =>
+    `${process.env.REACT_APP_BASE_URL}/api/categories/${id}`,
   getFilteredProducts: (categories, brands) =>
-    `/api/products/filter?categories=${categories}&brands=${brands}`,
-  createBrand: '/api/brands'
+    `${process.env.REACT_APP_BASE_URL}/api/products/filter?categories=${categories}&brands=${brands}`,
+  createBrand: `${process.env.REACT_APP_BASE_URL}/api/brands`
 };
 
 const getHeaders = () => ({
